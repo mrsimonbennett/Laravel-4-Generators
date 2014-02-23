@@ -122,8 +122,8 @@ class FormDumperGenerator {
      */
     protected function getFormOpen($method, $model)
     {
-        $models = Pluralizer::plural($model);
-
+        $models = with(new $model)->getTable();
+       
         if (preg_match('/edit|update|put|patch/i', $method))
         {
             return "{{ Form::model(\${$model}, array('method' => 'PATCH', 'route' => array('{$models}.update', \${$model}->id))) }}";
