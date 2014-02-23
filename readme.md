@@ -1,3 +1,5 @@
+This is forked, from Jeffery Ways Gen with a couple of the pull requests merged, Please note the VCS part of the composer.json if you wish to install this
+
 This Laravel 4 package provides a variety of generators to speed up your development process. These generators include:
 
 - `generate:model`
@@ -17,13 +19,18 @@ This Laravel 4 package provides a variety of generators to speed up your develop
 
 ## Installation
 
-Begin by installing this package through Composer. Edit your project's `composer.json` file to require `way/generators`.
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `way/generators`. Please note the VCS Settings 
 
 	"require": {
 		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master"
 	},
 	"minimum-stability" : "dev"
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mrsimonbennett/Laravel-4-Generators.git"
+        }
 
 Next, update Composer from the Terminal:
 
